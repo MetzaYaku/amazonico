@@ -1,0 +1,199 @@
+/*Aquí se personaliza todo las etiqueta HTML de las página*/
+* {
+    margin: 0; 
+    padding: 0;  
+}
+/*AQUÍ OCULTO EL ÍCONO DE HAMBURGUESA*/
+#activadormenu{
+    display: none;
+}
+#hamburguesa{
+    display: none;
+    font-size: 30px;
+    color: #d3f8d6;
+    /*padding: 900px;*/
+    cursor: pointer;
+}
+
+
+/*aQUÍ SE PERSONALIZA EL CUERPO, LA ETIQUEta BODY*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+/*AQUÍ SE PERSONALIZA LA CABECERA DE LA PÁGINA*/
+header{
+    background-color: #1B5E20;
+    color: white;
+    text-align: center;
+}
+/*AQUÍ SE PERSONALIZA EL MENÚ DE LA PÁGINA*/
+#menu {
+list-style: none;
+display: flex;
+justify-content: center;
+gap: 20px;
+padding: 30px;
+}
+/*AQUI SE PERSONALIZA LOS BOTONES*/
+#menu a{
+    text-decoration: none;
+    background-color: #2E7D32;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+   transition: all 0.3s ease;
+}
+/*CAMBIO DE COLOR DE LOS BOTONES*/
+#menu a:hover{
+    background-color: #43a047;
+    transform: translateY(-5px);
+}
+/*AQUI VOY A PERSONALIZAR EL CONTENEDOR*/
+#contenedor{
+    display: flex;
+    min-height: 400px;
+    height: 100vh;
+}
+/*AQUI PERSONALIZO PUBLICIDAD 1 Y 2*/
+#publicidad{
+    width: 20%;
+    background-color: #d3f8d6;
+    padding: 20px;
+}
+#publicidad img{
+width: 100%;
+border-radius: 30px;
+}
+#publicidad img:hover{
+    -webkit-transform: rotate(360deg);transform: rotate(360deg);
+}
+
+/*AQUÍ VOY A PERSONALIZAR LA SECCIÓN DE CONTENIDO*/
+#contenido{
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+/*AQUI PERSONALIZO EL IFRAME*/
+iframe{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #2E7D32;
+    border-radius: 10px;
+}
+/*AQUÍ PERSONALIZO PRODUCTOS Y SERVISIOS*/
+#galeria {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 20px;
+    justify-content: center;
+}
+.prod-serv{
+    background-color: #E8F5E9;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.prod-serv img{
+    width: 100%;
+    border-radius: 5px;
+}
+.prod-serv:hover{
+    box-shadow: 0px 5px 10px #1B5E20;
+}
+.prod-serv button{
+    background-color: #1B5E20;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.prod-serv button:hover{
+    background-color: #43a047;
+    border: none;
+}
+/*  aQUI VOY A PERSONALIZAR LA MISIÓN Y VISIÓN*/
+.mis-vis{
+    border: 1px solid #2E7D32;
+    width: 300px;
+    border-radius: 30px;
+    padding: 10px;
+    margin: auto;
+    box-shadow: 0px 5px 10px #1B5E20;
+}
+/*AQUI PERSONALIZO CONTACTO*/
+form {
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+button {
+    padding: 10px;
+    background-color: #1B5E20;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #43a047;
+}
+/*AQUÍ PERSONALIZO EL PIE DE PÁGINA*/
+footer{
+    background-color: #1B5E20;
+    color: white;
+    text-align: center;
+    padding: 80px;
+}
+
+/* AQUI VOY A HACER QUE LA PÁGINA SEA RESPONSIVO CON MEDIA QUERIES*/
+@media (max-width: 768px){
+    /*AQUÍ MUESTRO EL BOTON HAMBURGUESA*/
+    #hamburguesa{
+        display: block;
+    }
+    #activadormenu:checked + #hamburguesa + #menu{
+        display: flex;
+    }
+    #menu{
+        display: none;
+        flex-direction: column;
+        padding: 0px;
+        gap: 1px;
+     }
+#menu a{
+    display: flex;
+    justify-content: center;
+}
+#contenedor{
+    flex-direction: column;
+}
+#publicidad,
+#contenido{
+    width: 100%;
+}
+
+#publicidad img{
+    margin: 0px 150px;
+width: 200px;
+border-radius: 30px;
+}
+
+iframe {
+    height: 600px;
+}
+#galeria{
+    grid-template-columns: repeat(1, auto);
+}
+
+}
